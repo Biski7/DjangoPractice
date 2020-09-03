@@ -79,45 +79,45 @@ body {
                 </form>
             </div>
 
-            <div class="col-25">
-                <div class="row">
-                    <div class="col-sm-10 offset-sn-3">
-                    <div class="container">
-                      <h4>THIS IS THE TOTAL PURCHASE YOU MADE <span class="price" style="color:black"><i class="fa fa-shopping-cart" ></i> <b></b></span></h4>
+<!--            <div class="col-25">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-sm-10 offset-sn-3">-->
+<!--                    <div class="container">-->
+<!--                      <h4>THIS IS THE TOTAL PURCHASE YOU MADE <span class="price" style="color:black"><i class="fa fa-shopping-cart" ></i> <b></b></span></h4>-->
 
 
-                       <table style="width:100%" id="t01">
-                    <tr>
-                        <th>Name of the movie</th>
-                        <th>Ticket Quantities</th>
-                        <th>Price</th>
-                     </tr>
-                    {% for tickets in slugs %}
-                    {% for product in cart_movies %}
-                    {% if product.slug == tickets.slug%}
-                    <tr>
-                       <td>{{ product.Title }}</td>
-                       <td>{{ tickets.quantity}}
-                         <div >
-                      <a href = "{{tickets.add_one_ticket}}"><button >+</button></a>
-                      <a href = "{{tickets.remove_one_ticket}}"><button >-</button></a>
-                      <a href = "{{tickets.remove_all_tickets}}"><button >Delete</button></a>
-                          </div></td>
-<!--                       <td>{{ product.Price|mul:tickets.quantity }} </td>-->
-						<td>{{ tickets.total_price_ticket}} </td>
-                     </tr>
+<!--                       <table style="width:100%" id="t01">-->
+<!--                    <tr>-->
+<!--                        <th>Name of the movie</th>-->
+<!--                        <th>Ticket Quantities</th>-->
+<!--                        <th>Price</th>-->
+<!--                     </tr>-->
+<!--                    {% for tickets in slugs %}-->
+<!--                    {% for product in cart_movies %}-->
+<!--                    {% if product.slug == tickets.slug%}-->
+<!--                    <tr>-->
+<!--                       <td>{{ product.Title }}</td>-->
+<!--                       <td>{{ tickets.quantity}}-->
+<!--                         <div >-->
+<!--                      <a href = "{{tickets.add_one_ticket}}"><button >+</button></a>-->
+<!--                      <a href = "{{tickets.remove_one_ticket}}"><button >-</button></a>-->
+<!--                      <a href = "{{tickets.remove_all_tickets}}"><button >Delete</button></a>-->
+<!--                          </div></td>-->
+<!--&lt;!&ndash;                       <td>{{ product.Price|mul:tickets.quantity }} </td>&ndash;&gt;-->
+<!--&lt;!&ndash;						<td>{{ tickets.total_price_ticket}} </td>&ndash;&gt;-->
+<!--                     </tr>-->
 
-                    {% endif %}
-                    {% endfor %}
-                    {% endfor %}
+<!--                    {% endif %}-->
+<!--                    {% endfor %}-->
+<!--                    {% endfor %}-->
 
 
-           </table>
+<!--           </table>-->
 
-                    </div>
-            </div>
-            </div>
-            </div>
+<!--                    </div>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--            </div>-->
 
 
 

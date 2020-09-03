@@ -10,8 +10,8 @@ class CheckoutForm1(forms.Form):
     Zip = forms.CharField(max_length=50)
     NameOnCard = forms.CharField(max_length=50)
     CCNumber = forms.IntegerField()
-    ExpMonth = forms.DateField(widget=forms.SelectDateWidget)
-    ExpYear = forms.CharField()
+    ExpDate = forms.DateField(widget=forms.SelectDateWidget)
+    # ExpYear = forms.CharField()
 
 # RawForm
 class CheckoutForm2(forms.Form):
@@ -23,7 +23,7 @@ class CheckoutForm2(forms.Form):
     Zip = forms.CharField(max_length=50)
     NameOnCard = forms.CharField(max_length=50)
     CCNumber = forms.IntegerField()
-    ExpMonth = forms.DateField(widget=forms.SelectDateWidget)
-    ExpYear = forms.CharField()
+    ExpDate = forms.DateField(widget=forms.SelectDateWidget)
+    # ExpYear = forms.CharField()
 
 

@@ -165,8 +165,8 @@ class Checkout2(models.Model):
     Zip = models.CharField(max_length=500)
     NameOnCard = models.CharField(max_length=500)
     CCNumber = models.IntegerField()
-    ExpMonth = models.CharField(max_length=20)
-    ExpYear = models.CharField(max_length=20)
+    ExpDate = models.CharField(max_length=20)
+    # ExpYear = models.CharField(max_length=20)
 
     def __str__(self):
         return self.Username

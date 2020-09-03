@@ -246,20 +246,15 @@ class CheckoutView(BaseView):
 #
 #     return render(request,'checkout1.html',context)
 
-def checkoutformView1(request):
-    template_name = 'checkout1.html'
-    form_class = CheckoutForm1
-    success_url = '/checkout1/'
-
-    return render(request,'checkout1.html')
+# def checkoutformView1(request):
+#     template_name = 'checkout1.html'
+#     form_class = CheckoutForm1
+#     success_url = '/checkout1/'
+#
+#     return render(request,'checkout1.html')
 
 def checkoutformView2(request):
     form = CheckoutForm2()
-    # initial_data = {
-    #     'username': 'Bruce Wayne',
-    #     "email": 'bruce@wayne.com',
-    #     'Address': 'Gotham'
-    # }
     if request.method =="POST":
         form = CheckoutForm2(request.POST)
         if form.is_valid():
