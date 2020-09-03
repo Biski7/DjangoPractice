@@ -131,69 +131,16 @@ class Cart(models.Model):
 
     def total_price_ticket(self):
         price = 0
-        # self.Price = Movie1.objects.get(slug=self.slug).Price
         price = Movie1.objects.get(slug=self.slug).Price
         Cart.objects.filter(slug=self.slug).update(Price=price)
-        # self.Price = self.item.Price
-        # self.item.slug = self.slug
-        # if self.item.slug == self.slug:
-        # return self.quantity * self.Price
         return self.quantity * price
-
-    # def total_final_price(self):
-    #     total_price = 0
-    #     for all in Cart.objects.all():
-    #         total_price  += Cart.total_price_ticket(self)
-    #     return total_price
 
     def total_final_price(self):
         total_price = 0
         total = 0
-        # price = Movie1.objects.get(slug=self.slug).Price
-        # Cart.objects.filter(slug=self.slug).update(Price=price)
         total_price  += Cart.total_price_ticket(self)
         return total_price
 
-
-
-    
-
-
-
-    # def get_final_price(self):
-    #     total = 0
-    #     for slug in Cart():
-    #         total += Cart.total_price_ticket()
-    #     return total
-# class Checkout1(models.Model):
-        #     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-        #     Username = models.CharField(max_length=500)
-        #     email = models.TextField(max_length=500)
-        #     # slug = models.CharField(max_length = 300)
-        #     # quantity = models.IntegerField(default=1)
-        #     Address = models.CharField(max_length=500)
-        #     City = models.CharField(max_length=500)
-        #     State = models.CharField(max_length=500)
-        #     Zip = models.CharField(max_length=500)
-        #     NameOnCard = models.CharField(max_length=500)
-        #     CCNumber = models.IntegerField()
-        #     ExpMonth = models.DateField()
-        #     ExpYear = models.DateField()
-        #     # checkout = models.BooleanField(default=False)
-        #     # price = models.FloatField(default= 100 )
-        #     quantity = models.ForeignKey(Cart, on_delete=models.CASCADE, default=1)
-        #     price = models.ForeignKey(Movie1, on_delete=models.CASCADE, default=100)
-        #
-        #     # slug = models.ForeignKey(Cart,on_delete=models.CASCADE)
-        #
-        #     def __str__(self):
-        #         return self.user.username
-    # def get_final_price(self):
-    #     total = 0
-    #     for slug in Cart():
-    #         total += Cart.total_price_ticket()
-    #     return total
-    #
 class Checkout(models.Model):
     Username = models.CharField(max_length=500)
     email = models.CharField(max_length=500)
